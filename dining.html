@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Etiquette</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Galada&display=swap" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Template Main CSS Files -->
+    <link href="assets/css/variables.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+<style>
+    /* Style for the column cards */
+    .column-card {
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    /* Hover effect */
+    .column-card:hover {
+        background-color: #10f808;
+        transform: translateY(-5px);
+    }
+
+    /* Style for the column titles */
+    .column-title {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    /* Style for the column images */
+    .column-image {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    /* Style for the column content */
+    .column-content {
+        font-size: 15px;
+    }
+
+    body {
+        background-image: url('assets/img/EatingBG.jpg');
+        /* Adjust the path to your image file */
+        background-size: cover;
+        /* Cover the entire viewport */
+        background-attachment: fixed;
+        /* Fixed background position */
+        background-repeat: no-repeat;
+        /* No repeating of the image */
+    }
+
+    .bi-search {
+        display: none;
+    }
+
+    #navbar {
+        text-align: center;
+    }
+
+    #navbar ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #navbar ul li {
+        display: inline-block;
+        margin-right: 20px;
+        /* Adjust this value as needed for spacing */
+    }
+
+    #navbar ul li:last-child {
+        margin-right: 0;
+    }
+</style>
+
+<body>
+    <!--LOADER ANIMATION-->
+    <div class="loader"></div>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <h1>Unveiling Malaysia</h1>
+            </a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="culture.html">
+                            <span>Cultures</span> <i class="bi bi-chevron-down dropdown-indicator"></i>
+                        </a>
+                        <ul>
+                            <li class="dropdown">
+                                <a href="etiquette.html">
+                                    <span>Etiquette</span> <i class="bi bi-chevron-down dropdown-indicator"></i>
+                                </a>
+                                <ul>
+                                    <li><a href="basic_etiquette.html">Basic Etiquette</a></li>
+                                    <li><a href="giftgiving.html">Gift Giving</a></li>
+                                    <li><a href="visiting.html">Visiting</a></li>
+                                    <li><a href="dining.html">Dining</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="religious.html">Religion</a></li>
+                            <li><a href="festivals.html">Festival</a></li>
+                            <li><a href="food.html">Food</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="position-relative">
+
+
+                <a href="#" class="mx-2 js-search-open"><span class="bi-search"></span></a>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+
+                <!-- ======= Search Form ======= -->
+                <div class="search-form-wrap js-search-form-wrap">
+                    <form action="search-result.html" class="search-form">
+                        <span class="icon bi-search"></span>
+                        <input type="text" placeholder="Search" class="form-control">
+                        <button class="btn js-search-close"><span class="bi-x"></span></button>
+                    </form>
+                </div><!-- End Search Form -->
+
+            </div>
+
+        </div>
+
+    </header><!-- End Header -->
+
+    <main id="main">
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-15" data-aos="fade-up">
+                        <h3 class="category-title" style="font-size: 32px; color: #ED1D68;">Dining Etiquette</h3>
+
+
+                        <div class="d-md-flex post-entry-2 half"
+                            style="background-color: rgba(85, 64, 2,0.7); padding: 20px; border-radius: 20px; box-shadow: 0px 4px 8px rgb(63, 63, 66);">
+                            <div style="width: 50%; border-right: 1px solid #e0e0e0; padding-right: 30px;">
+                                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div style="border: 3px solid #f5f4e0; padding: 10px;">
+                                                <img src="assets/img/E1.jpeg" class="d-block w-100"
+                                                    alt="Eat by using fork and spoon">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div style="border: 3px solid #f5f4e0; padding: 10px;">
+                                                <img src="assets/img/E2.jpg" class="d-block w-100"
+                                                    alt="Use hand to eat">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="width: 50%; padding-left: 30px;">
+                                <div class="post-meta"><span class="mx-1"></span></div>
+                                <h3
+                                    style="font-family: 'Acme', sans-serif,'Galada', cursive; color: #eaff08; font-size: 32px;">
+                                    Utensils Usage</h3>
+                                <p style="font-size: 23px; color: #ffffff;">
+                                    In Malaysia, utensil use strikes a balance between tradition and practicality. While
+                                    eating with hands is common, spoons,
+                                    forks, and chopsticks are also widely used. The choice of utensils varies based on
+                                    cuisine and
+                                    personal preference, highlighting the adaptability and inclusiveness of Malaysian
+                                    dining culture.
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="d-md-flex post-entry-2 half"
+                            style="background-color: rgba(157, 126, 5,0.7); padding: 20px; border-radius: 20px; box-shadow: 0px 4px 8px rgb(63, 63, 66)">
+                            <div style="width: 50%; padding-right: 30px;">
+                                <div class="post-meta"><span class="mx-1"></span></div>
+                                <h3
+                                    style="font-family: 'Acme', sans-serif,'Galada', cursive; color: #eaff08; font-size: 32px;">
+                                    Communal Dining</h3>
+                                <p style="font-size: 23px; color: #ffffff;">
+                                    Communal dining is a cherished practice in Malaysia, emphasizing togetherness and
+                                    unity through a shared spread of delectable
+                                    dishes at the table. Beyond its culinary importance, it fosters social bonds,
+                                    encourages generosity, and
+                                    reflects the country's cultural diversity. It's a tradition that goes beyond food,
+                                    promoting connections
+                                    and friendships while embodying Malaysia's multicultural spirit.
+                                </p>
+                            </div>
+
+                            <div style="width: 50%; border-left: 1px solid #e0e0e0; padding-left: 30px;">
+                                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div style="border: 3px solid #f5f4e0; padding: 10px;">
+                                                <img src="assets/img/E3.jpg" class="d-block w-100" alt="Eat together">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div style="border: 3px solid #f5f4e0; padding: 10px;">
+                                                <img src="assets/img/E4.jpg" class="d-block w-100" alt="Share food">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-md-flex post-entry-2 half"
+                            style="background-color: rgba(85, 64, 2,0.7); padding: 20px; border-radius: 20px; box-shadow: 0px 4px 8px rgb(63, 63, 66);">
+                            <div style="width: 50%; border-right: 1px solid #e0e0e0; padding-right: 30px;">
+                                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div style="border: 3px solid #f5f4e0; padding: 10px;">
+                                                <img src="assets/img/E5.jpg" class="d-block w-100" alt="Offer food">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div style="border: 3px solid #f5f4e0; padding: 10px;">
+                                                <img src="assets/img/E6.jpg" class="d-block w-100" alt="Offer food">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="width: 50%; padding-left: 30px;">
+                                <div class="post-meta"><span class="mx-1"></span></div>
+                                <h3
+                                    style="font-family: 'Acme', sans-serif,'Galada', cursive; color: #eaff08; font-size: 32px;">
+                                    Offering Food</h3>
+
+                                <p style="font-size: 23px; color: #ffffff;">
+                                    Offering food is a cherished practice in Malaysia, symbolizing hospitality and
+                                    kindness. When someone shares their
+                                    food, they extend a warm welcome and a sense of care. Politely accepting these
+                                    offerings acknowledges the
+                                    gesture and shows mutual respect. Beyond sharing a meal, it's a way of connecting,
+                                    fostering unity, and
+                                    embracing cultural customs.
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="d-md-flex post-entry-2 half"
+                            style="background-color: rgba(157, 126, 5,0.7); padding: 20px; border-radius: 20px; box-shadow: 0px 4px 8px rgb(63, 63, 66);">
+                            <div style="width: 50%; padding-right: 30px;">
+                                <div class="post-meta"><span class="mx-1"></span></div>
+                                <h3
+                                    style="font-family: 'Acme', sans-serif,'Galada', cursive; color: #eaff08; font-size: 32px;">
+                                    Why Avoid Walking While Eating Matters in Malaysia ?</h3>
+
+                                <p style="font-size: 23px; color: #ffffff;">
+                                    Walking while eating is generally considered impolite, including in Malaysia. It's
+                                    advised to avoid moving around
+                                    while consuming a meal, as it's deemed disrespectful to both the food and others.
+                                    Opting to sit down and
+                                    focus solely on eating shows respect for the dining experience and the food itself.
+                                </p>
+                            </div>
+
+                            <div style="width: 50%; border-left: 1px solid #e0e0e0; padding-left: 30px;">
+                                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div style="border: 3px solid #f5f4e0; padding: 10px;">
+                                                <img src="assets/img/E7.jpg" class="d-block w-100"
+                                                    alt="Don't stand while eating">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div style="border: 3px solid #f5f4e0; padding: 10px;">
+                                                <img src="assets/img/E8.jpg" class="d-block w-100"
+                                                    alt="Sit while eating">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr style="border-width: 7px; border-color: #fffb00;">
+
+                        <!-- Inside the existing <div class="col-md-15" data-aos="fade-up"> element -->
+                        <div class="row">
+                            <!-- Column 1 -->
+                            <div class="col-md-4">
+                                <h4 style="color: #fffb00;font-size: 30px; font-weight: bold;"
+                                    class="column-title text-center">Indian Practices</h4>
+                                <div class="column-card" style="background-color: #585309;">
+                                    <img src="assets/img/eat1.jpg" alt="Eating With Hands" class="column-image">
+                                    <p class="column-content">
+                                    <ul
+                                        style="list-style-type: circle; margin-left: 15px; font-size: 20px; color: #f9f6f6;">
+                                        <li><strong style="color:rgb(193, 246, 193)">Eating with Hands: </strong>It's a
+                                            cultural practice that connects them to their Indian heritage. This
+                                            tradition enhances the sensory experience of eating and is believed to aid
+                                            digestion. It's a way of maintaining cultural identity and a link to
+                                            ancestral customs.</li>
+                                        <li><strong style="color:rgb(193, 246, 193)">Avoidance of Beef: </strong>The
+                                            practice is driven by religious beliefs, as a significant number follow
+                                            Hinduism, where cows are considered sacred. This practice stems from
+                                            cultural reverence for the animal and a desire to honor religious
+                                            traditions.</li>
+                                    </ul>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Column 2 -->
+                            <div class="col-md-4">
+                                <h4 style="color: #fffb00; font-size: 30px;font-weight: bold;"
+                                    class="column-title text-center">Chinese Practices</h4>
+                                <div class="column-card" style="background-color: #585309;">
+
+                                    <img src="assets/img/eat2.jpg" alt="Hand Hygiene Image" class="column-image">
+                                    <p class="column-content">
+                                    <ul
+                                        style="list-style-type: circle; margin-left: 15px; font-size: 20px; color: #f9f6f6;">
+                                        <li><strong style="color:rgb(193, 246, 193)">Usage of Chopsticks: </strong>It's
+                                            important not to leave chopsticks standing upright in a bowl of rice, as
+                                            this is seen as unlucky due to its resemblance to rituals involving incense
+                                            in times of mourning.</li>
+                                        <li><strong style="color:rgb(193, 246, 193)">Offering Food: </strong>When
+                                            picking up food with serving chopsticks to place on your plate, avoid
+                                            pointing the serving chopsticks directly at others. Instead, offer the food
+                                            in a more subtle manner.</li>
+                                    </ul>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Column 3 -->
+                            <div class="col-md-4">
+                                <h4 style="color: #fffb00;font-size: 30px; font-weight: bold;"
+                                    class="column-title text-center">Malay Practices</h4>
+                                <div class="column-card" style="background-color: #585309;">
+
+                                    <img src="assets/img/eat3.jpg" alt="Ordering Etiquette Image" class="column-image">
+                                    <p class="column-content">
+                                    <ul
+                                        style="list-style-type: circle; margin-left: 15px; font-size: 20px; color: #f9f6f6;">
+                                        <li><strong style="color:rgb(193, 246, 193)">Offering Prayers: </strong>It's
+                                            common to offer a brief prayer before starting to eat, thanking God for the
+                                            food.</li>
+                                        <li><strong style="color:rgb(193, 246, 193)">Avoidance of Pork: </strong>It's
+                                            due to an Islamic beliefs that categorize it as forbidden (haram). With deep
+                                            religious and cultural roots, they rigorously adhere to this principle,
+                                            opting for halal dietary options to prevent pork consumption.</li>
+
+                                    </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+        </section>
+    </main><!-- End #main -->
+
+    \ <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-4">
+                        <h3 class="footer-heading">About Unveiling Malaysia</h3>
+                        <p>Through Unveiling Malaysia, we aim to share the beauty,
+                            and uniqueness of Malaysia's cultures with the world. Join us on this cultural journey as we
+                            explore the traditions,
+                            festivals, cuisine, and etiquette that make Malaysia a truly remarkable nation. Join us in
+                            exploring Malaysia's unique tapestry of cultures.</p>
+                        <p><a href="about.html" class="footer-link-more">Learn More</a></p>
+                    </div>
+                    <div class="col-6 col-lg-2">
+                        <h3 class="footer-heading">Cultures</h3>
+                        <ul class="footer-links list-unstyled">
+                            <li><a href="religious.html"><i class="bi bi-chevron-right"></i>Religion</a></li>
+                            <li><a href="etiquette.html"><i class="bi bi-chevron-right"></i>Etiquette</a></li>
+                            <li><a href="festivals"><i class="bi bi-chevron-right"></i>Festival</a></li>
+                            <li><a href="food.html"><i class="bi bi-chevron-right"></i>Food</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <h3 class="footer-heading">Working Hours</h3>
+                        <p>Our office is open from Monday to Friday, 9:00 AM - 5:00 PM.</p>
+                        <ul class="footer-links list-unstyled">
+                            <li><i class="bi bi-geo-alt"></i> Address: 19, Queensland Street, 30200 Malacca, Malaysia
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <h3 class="footer-heading">Contact Us</h3>
+                        <p>If you have any questions or inquiries, please feel free to contact us:</p>
+                        <ul class="footer-links list-unstyled">
+                            <li><i class="bi bi-telephone"></i> Phone: +60 1187678200</li>
+                            <li><i class="bi bi-envelope"></i> Email: contact@unveilingmalaysia.com</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-legal">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <div class="copyright">
+                            © Copyright 2023 <strong><span>Unveiling Malaysia</span></strong>. All Rights Reserved.
+                        </div>
+                    </div>
+                    <!-- Add a section for displaying the date and time -->
+                    <div class="col-md-6">
+                        <div class="social-links mb-3 mb-lg-0 text-center text-md-end">
+                            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                        </div>
+                        <!-- Display the date and time -->
+                        <p id="datetime" class="mb-0 text-center text-md-end"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript to display the date and time in the footer -->
+    <script>
+        function displayDateTime() {
+            const dateTimeElement = document.getElementById('datetime');
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric',
+                timeZoneName: 'short'
+            };
+            const currentDateTime = new Date().toLocaleDateString('en-US', options);
+            dateTimeElement.textContent = currentDateTime;
+        }
+        // Call the function to display date and time
+        displayDateTime();
+    </script>
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

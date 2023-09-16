@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Unveiling Malaysia</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <script async src="https://platform.instagram.com/en_US/embeds.js"></script>
+
+  <!-- Favicons -->
+  <link href="assets/img/1.png" rel="icon">
+  <link href="assets/img/2.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <style>
+    /* Header Section */
+    #header {
+      background-color: #F380A8;
+    }
+
+    /* Body Section */
+    body {
+      background-image: url('assets/img/bgp.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    /* Slider Section Styles */
+    .swiper.sliderFeaturedPosts {
+      width: 100%;
+      max-width: 1450px;
+      height: 500px;
+      margin-bottom: 50px;
+    }
+
+    /* Video Section Styles */
+    .video_css {
+      text-align: center;
+      position: relative;
+      padding-bottom: 56.25%;
+      overflow: hidden;
+      padding-top: 30px;
+    }
+
+    .video_css iframe {
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Title Section Styles */
+    .title-all {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .title-all h1 {
+      font-size: 28px;
+    }
+
+    .title-all p {
+      font-size: 18px;
+    }
+
+    /* Row and Column Layout Styles */
+    .row {
+      display: flex;
+      align-items: center;
+    }
+
+    .col-lg-6 {
+      padding: 20px;
+    }
+
+    /* Additional Video Section Styles */
+    .video_css iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Image Gallery Styles */
+    .gallery-container {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .gallery {
+      display: flex;
+      animation: slide 10s linear infinite;
+      margin: 0;
+      padding: 0;
+      animation-timing-function: linear;
+      animation-direction: alternate;
+    }
+
+    .gallery-item {
+      flex: 0 0 auto;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      width: 33.33%;
+      max-height: 300px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Keyframes for Image Gallery Slide Animation */
+    @keyframes slide {
+      0% {
+        transform: translateX(0%);
+      }
+
+      100% {
+        transform: translateX(-66.66%);
+      }
+
+      200% {
+        transform: translateX(0%);
+      }
+    }
+
+    /* Social Media Section Styles */
+    .social-media-section {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 20px;
+      overflow-x: auto;
+      padding: 0 20px;
+    }
+
+    /* Keyframes for fadeInUp Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Styles for h1 Elements */
+    h1 {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+    /* Button Styles */
+    button {
+      border: none;
+    }
+
+    /* Weather Container Styles */
+    .weather-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      margin-top: -40px;
+      /* Add a background color with transparency */
+    }
+
+    /* Get Weather Button Styles */
+    #getWeather {
+      margin-top: 0px;
+    }
+
+    /* Center the weather information */
+    #weatherInfo {
+      margin-top: 10px;
+    }
+
+    /* Center the button horizontally */
+    .btn {
+      display: inline-block;
+    }
+
+    /* Hover Effects for Various Sections */
+    .title-all:hover,
+    .question-container:hover,
+    .weather-container:hover,
+    .gallery-item:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+
+    .instagram-posts-container {
+      display: flex;
+      justify-content: center;
+      /* Center horizontally */
+      align-items: flex-start;
+      /* Align the tops of the posts */
+      gap: 20px;
+      /* Add some space between posts */
+      overflow-x: auto;
+      padding: 0 20px;
+    }
+
+    /* Styles for Individual Instagram Posts */
+    .instagram-post {
+      text-align: center;
+      animation: fadeInUp 1s ease-in-out;
+      width: 300px;
+      margin-left: 30px;
+      margin-right: 10px;
+    }
+
+    /* Place the section title at the top */
+    .instagram-post .section-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  </style>
+
+  <!-- Main CSS Files -->
+  <link href="assets/css/variables.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!--jQuery-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1>Unveiling Malaysia</h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="culture.html">
+              <span>Cultures</span> <i class="bi bi-chevron-down dropdown-indicator"></i>
+            </a>
+            <ul>
+              <li class="dropdown">
+                <a href="etiquette.html">
+                  <span>Etiquette</span> <i class="bi bi-chevron-down dropdown-indicator"></i>
+                </a>
+                <ul>
+                  <li><a href="basic_etiquette.html">Basic Etiquette</a></li>
+                  <li><a href="giftgiving.html">Gift Giving</a></li>
+                  <li><a href="visiting.html">Visiting</a></li>
+                  <li><a href="dining.html">Dining</a></li>
+                </ul>
+              </li>
+              <li><a href="religious.html">Religion</a></li>
+              <li><a href="festivals.html">Festival</a></li>
+              <li><a href="food.html">Food</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="position-relative">
+      </div>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Slider Section ======= -->
+  <div class="swiper sliderFeaturedPosts">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <a href="etiquette.html" class="img-bg d-flex align-items-end"
+          style="background-image: url('assets/img/main1.jpg');">
+          <div class="img-bg-inner">
+            <h2>Etiquette: "Harmony in Gestures"</h2>
+            <p>Malaysian etiquette is deeply rooted in the idea of respecting diversity and maintaining harmony. It
+              involves gestures like the traditional Malay salam, showing deference to elders, and using proper titles
+              when addressing others. Politeness and respect for cultural differences are central to Malaysian
+              etiquette.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="swiper-slide">
+        <a href="religious.html" class="img-bg d-flex align-items-end"
+          style="background-image: url('assets/img/main2.jpg');">
+          <div class="img-bg-inner">
+            <h2>Religion: "A Tapestry of Faiths"</h2>
+            <p>Malaysia is a multi-religious nation, with Islam, Buddhism, Christianity, Hinduism, and other faiths
+              coexisting harmoniously. Each religion contributes to the country's rich religious tapestry. Malaysians
+              often display religious tolerance and participate in interfaith activities.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="swiper-slide">
+        <a href="festivals.html" class="img-bg d-flex align-items-end"
+          style="background-image: url('assets/img/main3.jpg');">
+          <div class="img-bg-inner">
+            <h2>Festivals: "Celebration Nation"</h2>
+            <p>Malaysia is renowned for its diverse and vibrant festivals. From Hari Raya (Eid) for Muslims, Chinese New
+              Year for the Chinese community, Deepavali for Hindus, and Christmas for Christians, the country celebrates
+              a multitude of festivals throughout the year. These festivals showcase Malaysia's cultural diversity and
+              unity.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="swiper-slide">
+        <a href="food.html" class="img-bg d-flex align-items-end"
+          style="background-image: url('assets/img/main4.jpg');">
+          <div class="img-bg-inner">
+            <h2>Food: "Flavors of Malaysia"</h2>
+            <p>Malaysian cuisine is a delightful fusion of Malay, Chinese, Indian, and indigenous influences. The food
+              is characterized by its bold and diverse flavors, often blending sweet, sour, spicy, and savory elements.
+              Street food is particularly popular, with dishes like nasi lemak, satay, and roti canai being iconic
+              Malaysian treats. The food culture emphasizes communal dining and sharing.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="custom-swiper-button-next">
+      <span class="bi-chevron-right"></span>
+    </div>
+    <div class="custom-swiper-button-prev">
+      <span class="bi-chevron-left"></span>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>
+  <!-- End Hero Slider Section -->
+
+  <!--Video-->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <!-- Place your video here -->
+        <div class="video_css">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/oOQ1SbkU_c4" frameborder="0"
+            allowfullscreen autoplay></iframe>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <!-- Place your heading and content here -->
+        <div class="title-all">
+          <h1>Journey Through Malaysia: A Cultural Kaleidoscope</h1>
+          <p>Embark on an enchanting visual odyssey through Malaysia, where ancient traditions harmoniously blend with
+            modern vibrancy. From the bustling streets of Kuala Lumpur to the tranquil beauty of Penang's heritage
+            sites, our video invites you to explore the captivating landscapes, diverse cultures, and warm hospitality
+            that make Malaysia a must-visit destination.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End Video-->
+
+  <!-- Question for User -->
+  <div id="question" class="question-container"
+    style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding-left: 100px; padding-right: 100px; height: 220px; margin-top: -20px;">
+    <h2 id="question" style="text-align: center; margin: 0 auto;">Which Malaysian festival or tradition do you find most
+      fascinating, and how would you like to learn more about it or participate in its celebration?</h2>
+    <input id="input" placeholder="Tell us your thoughts here..." style="margin-top: 10px; width: 250px;">
+    <!-- Use a container to group the buttons and apply styles to the container -->
+    <div style="display: flex; gap: 10px; margin-top: 10px;">
+      <button onclick="save();" class="btn btn-primary mx-auto d-block">Save</button>
+      <button onclick="view();" class="btn btn-primary mx-auto d-block">View</button>
+      <!-- Button to delete local storage -->
+      <button onclick="clearLocalStorage();" class="btn btn-primary mx-auto d-block">Clear</button>
+    </div>
+  </div>
+  <!-- Question for User -->
+
+  <!-- Container to display saved responses -->
+  <div id="responses-container"
+    style="display: none; flex-direction: column; align-items: center; justify-content: center; padding-left: 100px; padding-right: 100px; height: 220px; margin-top: -40px;">
+    <h2 style="text-align: center;">Saved Responses</h2>
+    <ul id="saved-responses"></ul>
+  </div>
+  <!-- End Container for saved responses -->
+
+  <!-- Local Storage for Question -->
+  <script>
+    function save() {
+      var new_data = document.getElementById('input').value;
+
+      if (localStorage.getItem('data') == null) {
+        localStorage.setItem('data', '[]');
+      }
+
+      var old_data = JSON.parse(localStorage.getItem('data'));
+      old_data.push(new_data);
+
+      localStorage.setItem('data', JSON.stringify(old_data));
+
+      // Clear the input field after saving
+      document.getElementById('input').value = "";
+    }
+
+    function view() {
+      var savedData = JSON.parse(localStorage.getItem('data'));
+      var savedResponsesList = document.getElementById('saved-responses');
+      var responsesContainer = document.getElementById('responses-container');
+
+      // Check if there are saved responses
+      if (savedData && savedData.length > 0) {
+        // Clear any previous responses
+        savedResponsesList.innerHTML = "";
+
+        // Display saved responses
+        for (var i = 0; i < savedData.length; i++) {
+          var listItem = document.createElement('li');
+          listItem.textContent = savedData[i];
+          savedResponsesList.appendChild(listItem);
+        }
+
+        // Show the responses container (if it's hidden)
+        responsesContainer.style.display = "flex";
+      }
+    }
+    function clearLocalStorage() {
+      // Clear the local storage data
+      localStorage.removeItem('data');
+
+      // Optionally, you can reset the displayed content
+      document.getElementById('output').textContent = '';
+
+      // Optionally, hide the saved responses container
+      document.getElementById('responses-container').style.display = 'none';
+    }
+  </script>
+  <!-- End Local Storage for Question -->
+
+  <!-- Weather Container -->
+  <div class="weather-container">
+    <h1 class="text-center">Weather Information</h1>
+    <button id="getWeather" class="btn btn-primary mx-auto d-block">Get Weather</button>
+    <div id="weatherInfo" class="text-center"></div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      var apiKey = '72ee964a8343b34884591ca795cf04d1';
+
+      $('#getWeather').click(function () {
+        var cityName = prompt('Enter a city name:');
+
+        if (cityName) {
+          var apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + apiKey;
+
+          $.getJSON(apiUrl, function (data) {
+            if (data.cod === 200) {
+              // Convert temperature from Kelvin to Celsius here
+              var temperatureKelvin = data.main.temp;
+              var temperatureCelsius = (temperatureKelvin - 273.15).toFixed(2); // Convert and round to 2 decimal places
+
+              var weatherInfo = 'Temperature: ' + temperatureCelsius + '°C<br>';
+              weatherInfo += 'Humidity: ' + data.main.humidity + '%<br>';
+              weatherInfo += 'Weather: ' + data.weather[0].description;
+
+              $('#weatherInfo').html(weatherInfo);
+            } else {
+              $('#weatherInfo').html('City not found');
+            }
+          });
+        }
+      });
+    });
+  </script>
+
+  <!--Instagram Post-->
+  <div class="title-all text-center">
+    <p></p>
+    <h1>Instagram Posts Related To Culture Of Malaysia</h1>
+  </div>
+  <!-- SOCIAL MEDIA PLUGINS -->
+  <!-- Container for Instagram Posts -->
+  <div class="instagram-posts-container">
+    <!-- Instagram Post 1 -->
+    <div class="instagram-post">
+      <div class="section-title">Etiquette</div>
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/CuO5Vvfx-1f/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+        data-instgrm-version="13" style="display: inline-block;"></blockquote>
+    </div>
+
+    <!-- Instagram Post 2 -->
+    <div class="instagram-post">
+      <div class="section-title">Religion</div>
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/CrQeAD-tmtX/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+        data-instgrm-version="13" style="display: inline-block;"></blockquote>
+    </div>
+
+    <!-- Instagram Post 3 -->
+    <div class="instagram-post">
+      <div class="section-title">Festival</div>
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/CwlvlpIxf20/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+        data-instgrm-version="13" style="display: inline-block;"></blockquote>
+    </div>
+
+    <!-- Instagram Post 4 -->
+    <div class="instagram-post">
+      <div class="section-title">Food</div>
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/CxCiR2NprYN/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+        data-instgrm-version="13" style="display: inline-block;"></blockquote>
+    </div>
+  </div>
+
+
+  <!-- Location -->
+  <div class="container" id="maptitle">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="title-all text-center">
+          <p></p>
+          <h1>Our Location</h1>
+          <iframe
+            src="https://www.google.com/maps/embed?key=AIzaSyDjqPkj-ET76rmA2SmoEnKQXGYSWlJ7IfY&pb=!1m18!1m12!1m3!1d1567.466022298888!2d101.13639347020302!3d4.337994178318566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cae296b5bdc7b3%3A0xa86e1b61b2c8e747!2sFaculty%20of%20Information%20and%20Communication%20Technology%20(FICT)%20Block%20N!5e0!3m2!1sen!2smy!4v1694332470324!5m2!1sen!2smy"
+            width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Location -->
+
+  <!--Photo Galleries-->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="title-all text-center">
+          <h1>Photo Galleries</h1>
+          <p>Our Photo Galleries section is a visual journey through the breathtaking and diverse landscapes, people,
+            and traditions that make up the cultural mosaic of Malaysia. Immerse yourself in the vibrant colors of
+            festivals, savor the tantalizing flavors of Malaysian cuisine, and explore the rich heritage of this
+            beautiful nation through captivating images captured from every corner of the country. Whether you're
+            planning a trip to Malaysia or simply seeking to appreciate its cultural beauty from afar, our curated photo
+            galleries provide a window into the enchanting world of Malaysian culture. Each photograph tells a story,
+            inviting you to explore and appreciate the intricate tapestry of this extraordinary land.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery-container">
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="assets/img/3.png" alt="Image 1">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/img/41.png" alt="Image 2">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/img/5.png" alt="Image 3">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/img/7.png" alt="Image 4">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/img/9.png" alt="Image 5">
+      </div>
+    </div>
+    <!--Photo Galleries-->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+      <div class="footer-content">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <h3 class="footer-heading">About Unveiling Malaysia</h3>
+              <p>Through Unveiling Malaysia, we aim to share the beauty,
+                and uniqueness of Malaysia's cultures with the world. Join us on this cultural journey as we explore the
+                traditions,
+                festivals, cuisine, and etiquette that make Malaysia a truly remarkable nation. Join us in exploring
+                Malaysia's unique tapestry of cultures.</p>
+              <p><a href="about.html" class="footer-link-more">Learn More</a></p>
+            </div>
+            <div class="col-6 col-lg-2">
+              <h3 class="footer-heading">Cultures</h3>
+              <ul class="footer-links list-unstyled">
+                <li><a href="religious.html"><i class="bi bi-chevron-right"></i>Religion</a></li>
+                <li><a href="etiquette.html"><i class="bi bi-chevron-right"></i>Etiquette</a></li>
+                <li><a href="festivals"><i class="bi bi-chevron-right"></i>Festival</a></li>
+                <li><a href="food.html"><i class="bi bi-chevron-right"></i>Food</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3">
+              <h3 class="footer-heading">Working Hours</h3>
+              <p>Our office is open from Monday to Friday, 9:00 AM - 5:00 PM.</p>
+              <ul class="footer-links list-unstyled">
+                <li><i class="bi bi-geo-alt"></i> Address: 19, Queensland Street, 30200 Malacca, Malaysia</li>
+              </ul>
+            </div>
+            <div class="col-lg-3">
+              <h3 class="footer-heading">Contact Us</h3>
+              <p>If you have any questions or inquiries, please feel free to contact us:</p>
+              <ul class="footer-links list-unstyled">
+                <li><i class="bi bi-telephone"></i> Phone: +60 1187678200</li>
+                <li><i class="bi bi-envelope"></i> Email: contact@unveilingmalaysia.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              <div class="copyright">
+                © Copyright 2023 <strong><span>Unveiling Malaysia</span></strong>. All Rights Reserved.
+              </div>
+            </div>
+            <!-- Add a section for displaying the date and time -->
+            <div class="col-md-6">
+              <div class="social-links mb-3 mb-lg-0 text-center text-md-end">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              </div>
+              <!-- Display the date and time -->
+              <p id="datetime" class="mb-0 text-center text-md-end"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript to display the date and time in the footer -->
+    <script>
+      function displayDateTime() {
+        const dateTimeElement = document.getElementById('datetime');
+        const options = {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          hour: 'numeric',
+          minute: 'numeric',
+          second: 'numeric',
+          timeZoneName: 'short'
+        };
+        const currentDateTime = new Date().toLocaleDateString('en-US', options);
+        dateTimeElement.textContent = currentDateTime;
+      }
+      // Call the function to display date and time
+      displayDateTime();
+    </script>
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
